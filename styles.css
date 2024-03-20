@@ -1,0 +1,461 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo styles */
+.logo {
+    height: 60px;
+    width: 80px;
+}
+
+/* Main image styles */
+.main {
+    width: 100%;
+    object-fit: cover;
+    transform: none;
+    opacity: 1;
+    will-change: transform, opacity;
+    border-radius: inherit;
+}
+
+/* Container for icons */
+.icon-container {
+    background-color: #fff;
+    padding: 20px;
+    color: #b3912b;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgba(53, 50, 30, 0.5); 
+  box-shadow: none;
+}
+
+
+/* Navbar brand logo styles */
+.navbar-brand img {
+    height: 50px;
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+    color: #fff;
+}
+
+/* Custom button styles */
+.btn-custom {
+    border: none;
+    color: #d0b200;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+    margin-top: 20px; 
+    font-weight: 700;
+    max-width: 140px;
+    margin: 10px;
+}
+
+
+.btn-custom:hover {
+    background-color: #c3a961;
+}
+
+
+.header,
+.toggle-bar {
+    background-color: #b3912b;
+    color: #fff;
+}
+
+
+.col-12 {
+    width: 100%;
+}
+
+
+.healthy-food-section-heading {
+    color: #b3912b;
+}
+
+
+.healthy-food-section-description {
+    color: #b3912b;
+}
+
+
+.carousel-item img {
+    height: 600px; 
+}
+
+
+
+
+
+
+.custom-button {
+    background-color: #695f1d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 700;
+    max-width: 140px;
+    margin: 10px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+.custom-button,
+.btn-custom {
+    margin-right: 0.5rem; 
+}
+
+.custom-button:last-child,
+.btn-custom:last-child {
+    margin-right: 0; 
+}
+
+
+
+.container-description {
+    background-color: #b3912b;
+    color: #fff;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+}
+
+/* menu us section */
+
+.explore-menu-section {
+    background-color: white;
+  }
+  .menu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .menu-item-image {
+    border-radius: 16px;
+  }
+  .menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+  .menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .menu-item-card {
+    border-radius: 16px;
+  }
+
+  .menu-item-card {
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu-item-card:hover {
+    opacity: 0.7;
+  }
+  
+  .menu-item-card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item-card:hover img {
+    transform: scale(1.05);
+  }
+  
+
+
+  .btn-custom {
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+
+
+
+
+
+
+
+/* why choose us section */
+
+
+.wcu-section {
+  background-color: #f9fbfe;
+}
+.wcu-section-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.wcu-section-description {
+  color: #5a7184;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .wcu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.3),
+                0px -10px 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .wcu-card {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  
+.wcu-card-image {
+  width: 87px;
+  height: 90px;
+}
+.wcu-card-title {
+  color: #323f4b;
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: 500;
+}
+.wcu-card-description {
+  color: #7b8794;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+.offers {
+  color: #323f4b;
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+
+
+/* Add this CSS to your stylesheet */
+.wcu-card {
+  transition: transform 0.3s ease;
+}
+
+.wcu-card:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* follow us section */
+
+.follow-us-section {
+  background-color: white;
+}
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.follow-us-icon-container {
+  background-color: #faf7e8;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+.icon {
+  color: #d0b200;
+  font-size: 35px;
+}
+
+.follow-us-icon-container {
+  animation: fade 1s alternate infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* about page css */
+
+.custom-button {
+  background-color: #695f1d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+  }
+  
+
+
+  .about{
+    margin-left: 500px;
+  }
+
+
+/* contact page styles */
+.follow-us-icon-container{
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.flex-column-form {
+  background-color: #bba31e8a; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.row-flex {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.flex-column-form, .opening-time, .contact-adress {
+    flex: 1 1 30%; 
+    margin-bottom: 20px; 
+}
+
+
+
+.golden-hr {
+  height: 1px;
+  background-color: #b3912b; 
+  border: none;
+margin-left: 150px;
+margin-top: 50px;
+margin-right: 150px;
+}
+
+
+.nav-link:hover {
+  background-color: rgb(225, 226, 216);
+  border-radius: 10px;
+
+}
+
+
+/* testinomials section */
+
+.testimonial-text {
+  font-style: italic;
+  color: #4a4b10;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #333333;
+}
+
+
+
+    .testimonials-container {
+text-align: center;
+    margin: 0 auto;
+    background-color: #636327e7;
+    font-style: italic;
+    font-weight: 800;
+    
+  }
+
+
+  .test-img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 30px;
+    display: block;
+    overflow: hidden;
+}
+
+
