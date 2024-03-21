@@ -32,6 +32,32 @@
 <link rel="stylesheet" href="styles.css">
 
 
+<!-- modal form validations -->
+<script>
+  function validateForm() {
+      var name = document.getElementById("exampleInputName1").value;
+      var phoneNumber = document.getElementById("exampleInputphoneNumber1").value;
+
+      if (name.trim() === "" || phoneNumber.trim() === "") {
+          alert("Please enter your name and phone number.");
+          return false;
+      }
+
+      // Assuming a valid phone number is a 10-digit number
+      if (!/^\d{10}$/.test(phoneNumber.trim())) {
+          alert("Please enter a valid 10-digit phone number.");
+          return false;
+      }
+
+      // If form is valid, show the "Thank you" message and hide the form
+      document.getElementById("bookingForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+
+      // Prevent the form from submitting
+      return false;
+  }
+</script>
+
 </head>
 
 <body>
@@ -59,34 +85,38 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title text-center" id="exampleModalLabel">FOOD MUNCH RESERVATION</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<div class="flex-column-form ">
-    <h3>Make a booking - contact us</h3>
-    <form class="media-centered">
-    <div class="form-group">
-    <p>Please leave your number we will call to make a reservation</p>
-    <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter your name">
-    </div>
-    <div class="form-group">
-    <input type="number" class="form-control" id="exampleInputphoneNumber1" placeholder="Enter your phone number">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    </div>
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLabel">FOOD MUNCH RESERVATION</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="flex-column-form">
+                  <h3>Make a booking - contact us</h3>
+                  <form class="media-centered" id="bookingForm" onsubmit="return validateForm()">
+                      <div class="form-group">
+                          <p>Please leave your number we will call to make a reservation</p>
+                          <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter your name">
+                      </div>
+                      <div class="form-group">
+                          <input type="tel" class="form-control" id="exampleInputphoneNumber1" placeholder="Enter your phone number">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <div id="thankYouMessage" style="display: none;">
+                      <p>Thanks for reservation! we will contact you soon!</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
-</div>
-</div>
-</div>
-</div>
+
+
 
 <!-- home section starts here  -->
 <div id="homeSection" class="container-fluid">
@@ -98,38 +128,41 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <div class="carousel-inner">
 <div class="carousel-item active">
 <img class="d-block w-100"
-src="biryani-bliss.jpg"
+src="image.png"
 alt="delicious biryani">
-<div class="carousel-caption d-flex flex-row justify-content-start align-items-center">
+<div class="carousel-caption d-flex flex-row justify-content-center align-items-center">
+  <a href="#contactSection">
+    <button class="btn btn-custom w-60" data-toggle="modal" data-target="#exampleModal">ORDER NOW</button>
+    </a>
 <!-- Anchor element wrapping the button -->
 <a href="#sectionMenu">
 <button class="btn custom-button w-60">VIEW MENU</button>
 </a>
-<a href="#contactSection">
-<button class="btn btn-custom w-60" data-toggle="modal" data-target="#exampleModal">ORDER NOW</button>
-</a>
+
 </div>
 </div>
 <div class="carousel-item">
 <img class="d-block w-100" src="falafel.png" alt="delicious falafel over rice">
-<div class="carousel-caption d-flex flex-row justify-content-start align-items-center">
+<div class="carousel-caption d-flex flex-row justify-content-center align-items-center">
+  <a href="#contactSection">
+    <button class="btn btn-custom w-60">ORDER NOW</button>
+    </a>
 <a href="#sectionMenu">
 <button class="btn custom-button w-60">VIEW MENU</button>
 </a>
-<a href="#contactSection">
-<button class="btn btn-custom w-60">ORDER NOW</button>
-</a>
+
 </div>
 </div>
 <div class="carousel-item">
-<img class="d-block w-100" src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="Third slide">
-<div class="carousel-caption d-flex  flex-row justify-content-start align-items-center">
+<img class="d-block w-100" src="slide-3.png" alt="Third slide">
+<div class="carousel-caption d-flex  flex-row justify-content-center align-items-center">
+  <a href="#contactSection">
+    <button class="btn btn-custom w-60">ORDER NOW</button>
+    </a>
 <a href="#sectionMenu">
 <button class="btn custom-button w-60">VIEW MENU</button>
 </a>
-<a href="#contactSection">
-<button class="btn btn-custom w-60">ORDER NOW</button>
-</a>
+
 </div>
 </div>
 </div>
@@ -425,7 +458,7 @@ and Exclusive Promo Codes on All Online Food Orders.
 
 <!-- Testimonials Section starts here-->
 <section class="testimonials-container">
-    <h4 style="color: #464602; text-align: center;">testinomials</h4>
+    <h4 style="color: #fff; font-weight: 900; font-style: italic; text-align: center;">Testinomials</h4>
   <div id="testimonialCarousel" class="carousel-testinomial slide" data-ride="carousel">
 
     <div class="carousel-inner">
@@ -550,7 +583,7 @@ and Exclusive Promo Codes on All Online Food Orders.
 
 
 
-<footer class="bg-dark text-light py-4">
+<footer class="text-light py-4" style="background-color:#b3912b;">
 <div class="container">
 <div class="row">
 <div class="col-md-6">
